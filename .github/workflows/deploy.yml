@@ -14,7 +14,7 @@ jobs:
         uses: ./.github/actions/cached-deps # /action.yml - is not required
         with:
           caching: 'false'
-      - nane: Output information
+      - name: Output information
         run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }}"
       - name: Lint code
         run: npm run lint
